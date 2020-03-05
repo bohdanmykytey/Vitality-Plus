@@ -8,15 +8,15 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import ReactDOM from 'react-dom';
+import { Appbar, Button, Container } from 'muicss/react';
 
 function App() {
 
 
   return (
     <div className='App'>
-      <LandingPage />
       <Router>
-        <Link to='/form'></Link>
 
       <Switch>
         <Route exact path='/form'>
@@ -25,6 +25,10 @@ function App() {
       </Switch>
 
       </Router>
+      
+      <LandingPage />
+      
+ 
     </div>
   );
 }

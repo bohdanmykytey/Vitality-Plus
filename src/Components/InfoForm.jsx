@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Form from 'muicss/lib/react/form';
 
 class InfoForm extends Component {
   constructor(props) {
@@ -24,7 +25,8 @@ class InfoForm extends Component {
   render() {
     return (
       <div>
-        <form onChange={this.handleSubmit}>
+        <Form inline={true}>
+        <form onChange={this.handleChange}>
           <label>
             First Name:
             <input
@@ -51,7 +53,7 @@ class InfoForm extends Component {
               type="email"
               label="email"
               placeholder="Email"
-              value={this.state.email}
+              value={this.state.value}
               onChange={this.handleChange}
             ></input>
           </label>
@@ -61,14 +63,17 @@ class InfoForm extends Component {
               type="tel"
               label="name"
               placeholder="Phone Number"
-              value={this.state.phone}
+              value={this.state.value}
               onChange={this.handleChange}
             ></input>
           </label>
           <label>
-            <input type="submit" value="submit"></input>
+            <input onClick={this.handleSubmit} type="submit" value="submit"></input>
           </label>
         </form>
+        </Form>
+
+        <a href='/'>home</a>
       </div>
     );
   }
